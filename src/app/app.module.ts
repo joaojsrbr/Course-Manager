@@ -9,6 +9,9 @@ import { StarComponent } from './star/star.component';
 import { ReplasePipe } from './pipe/replase.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { Error404Component } from './error-404/error-404.component';
+import { CourceInfoComponent } from './courses/cource-info.component';
+import { TestBed } from '@angular/core/testing';
+import { TestComponent } from './teste/teste.component';
 
 
 @NgModule({
@@ -19,6 +22,8 @@ import { Error404Component } from './error-404/error-404.component';
     ReplasePipe,
     NavBarComponent,
     Error404Component,
+    CourceInfoComponent,
+    TestComponent
 
   ],
   imports: [
@@ -26,14 +31,22 @@ import { Error404Component } from './error-404/error-404.component';
     FormsModule,
     RouterModule.forRoot([
       {
-        path: '', redirectTo: 'courses', pathMatch: 'full'
-      }, 
-      {
         path: 'courses', component: CourseListComponent
       },
       {
+        path:'courses/info/:id', component: CourceInfoComponent
+      },
+      {
+        path:'courses/pdf', component: TestComponent
+      },
+      {
+        path: '', redirectTo: 'courses', pathMatch: 'full'
+      }, 
+      {
         path: '**', component: Error404Component 
       },
+      
+      
     
      
     ]),
