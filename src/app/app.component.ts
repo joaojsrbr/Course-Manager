@@ -9,7 +9,5 @@ export class AppComponent {
   title = 'course-manager';
 
 
-  nome: string = "joão";
-
-  
+  name: string = 'John';
 }
