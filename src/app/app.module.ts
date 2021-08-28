@@ -34,6 +34,7 @@ import { Error404Component } from './error-404/error-404.component';
       {
         path: '**', component: Error404Component 
       },
+    
      
     ]),
     
