@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { StarModule } from '../shared/component/star/star.module';
 import { AppPipeModule } from '../shared/pipe/app-pipe.module';
+import { TestComponent } from '../teste/teste.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,12 @@ import { AppPipeModule } from '../shared/pipe/app-pipe.module';
             },
             {
                 path: 'courses/info/:id', component: CourseInfoComponent
-            }
+            },
+            {
+                path: 'github', component: TestComponent
+            },
+            
+            
         ])
     ]
 })

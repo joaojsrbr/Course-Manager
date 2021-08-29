@@ -18,7 +18,7 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">Price:</label>    
         <div class="col-sm-10">
-            <input [(ngModel)]="course.price" required name="price" #coursePrice="ngModel" type="number" 
+            <input [(ngModel)]="course.price" required name="price." #coursePrice="ngModel" type="currency" 
                 [ngClass]="{'is-invalid': coursePrice.invalid}" class="form-control">
             
             <div class="invalid-feedback">
@@ -51,6 +51,6 @@
         </div>        
     </div>
 
-    <button [disabled]="courseForm.invalid" (click)="save()" class="btn btn-primary mr-2">Save</button>
+    <button [disabled]="courseForm.invalid" (click)="save()" class="btn btn-primary mr-3">Save</button>
     <button [routerLink]="['/courses']" class="btn btn-secondary">Back</button>
 </form>
